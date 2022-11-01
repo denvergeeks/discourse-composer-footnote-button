@@ -1,0 +1,28 @@
+composer_footnote_button_title:
+  type: string
+  default: "Insert Footnote"
+  description: "Composer footnote button title"
+composer_footnote_button_text:
+  type: string
+  default: "This text will be in footnote"
+  description: "Composer footnote button text"
+composer_footnote_button_icon:
+  type: string
+  default: "superscript"
+  description: "Change footnote button icon."
+svg_icons: 
+  default: "superscript"
+  type: "list"
+  list_type: "compact"
+  description: "List of FontAwesome 5 icons used in this theme component."
+put_in_popup_menu:
+  type: bool
+  default: true
+  description: "Add the footnote button to popup options menu. Uncheck this to put it to toolbar section."  
+composer_footnote_button_group:
+  default: insertions
+  type: enum
+  choices:
+    - fontStyles
+    - extras
+  description: "Change footnote button group position."
