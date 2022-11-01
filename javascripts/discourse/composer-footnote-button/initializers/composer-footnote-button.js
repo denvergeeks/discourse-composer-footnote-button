@@ -11,8 +11,8 @@ export default {
         I18n.translations[currentLocale].js.composer = {};
       }
       
-      I18n.translations[currentLocale].js.composer.footnote_button_text = settings.composer_footnote_button_text;
-      I18n.translations[currentLocale].js.footnote_button_title = settings.composer_footnote_button_title;
+      I18n.translations[currentLocale].js.footnote_button_title = I18n.t(themePrefix("composer_footnote_button_title"));
+      I18n.translations[currentLocale].js.composer.footnote_button_text = I18n.t(themePrefix("composer_footnote_button_text"));
       
       api.modifyClass("controller:composer", {
         pluginId: "FootnoteButton",
