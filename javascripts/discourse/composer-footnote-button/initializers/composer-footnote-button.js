@@ -22,7 +22,8 @@ export default {
             this.get("toolbarEvent").applySurround(
               '^[',
               "]",
-              "footnote_button_text"
+              "footnote_button_text",
+              { multiline: false }
             );
           },
         },
@@ -48,7 +49,8 @@ export default {
               return e.applySurround(
                 '^[',
                 "]",
-                "footnote_button_text"
+                "footnote_button_text",
+                { multiline: false }
               );
             }
           });
