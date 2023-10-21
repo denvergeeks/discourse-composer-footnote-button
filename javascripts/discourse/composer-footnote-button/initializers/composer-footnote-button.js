@@ -30,7 +30,7 @@ export default {
       });
       
       if (settings.put_in_popup_menu) {
-        api.addToolbarPopupMenuOptionsCallback((controller) => {
+        api.addToolbarPopupMenuOption((controller) => {
           return {
             action: "footnoteButton",
             icon: settings.composer_footnote_button_icon,
