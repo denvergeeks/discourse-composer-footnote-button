@@ -30,12 +30,10 @@ export default {
       });
       
       if (settings.put_in_popup_menu) {
-        api.addToolbarPopupMenuOptionsCallback((controller) => {
-          return {
-            action: "footnoteButton",
-            icon: settings.composer_footnote_button_icon,
-            label: "footnote_button_title",
-          };
+        api.addComposerToolbarPopupMenuOption({
+          icon: settings.composer_footnote_button_icon,
+          label: "footnote_button_title",
+          action: "footnoteButton",
         });
       } else {
         api.onToolbarCreate(function(toolbar) {
