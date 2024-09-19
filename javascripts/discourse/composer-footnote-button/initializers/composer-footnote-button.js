@@ -4,16 +4,8 @@ import I18n from "I18n";
 export default {
   name: "composer-footnote-button",
 
-  initialize() {
-    withPluginApi("0.8", (api) => {   
-      const currentLocale = I18n.currentLocale();
-      if (!I18n.translations[currentLocale].js.composer) {
-        I18n.translations[currentLocale].js.composer = {};
-      }
-      
-      I18n.translations[currentLocale].js.footnote_button_title = I18n.t(themePrefix("composer_footnote_button_title"));
-      I18n.translations[currentLocale].js.composer.footnote_button_text = I18n.t(themePrefix("composer_footnote_button_text"));
-      
+
+
       api.modifyClass("controller:composer", {
         pluginId: "FootnoteButton",
 
@@ -28,6 +20,20 @@ export default {
           },
         },
       });
+
+
+  
+  initialize() {
+    withPluginApi("0.8", (api) => {   
+      const currentLocale = I18n.currentLocale();
+      if (!I18n.translations[currentLocale].js.composer) {
+        I18n.translations[currentLocale].js.composer = {};
+      }
+      
+      I18n.translations[currentLocale].js.footnote_button_title = I18n.t(themePrefix("composer_footnote_button_title"));
+      I18n.translations[currentLocale].js.composer.footnote_button_text = I18n.t(themePrefix("composer_footnote_button_text"));
+      
+
       
       if (settings.put_in_popup_menu) {
         api.addComposerToolbarPopupMenuOption({
